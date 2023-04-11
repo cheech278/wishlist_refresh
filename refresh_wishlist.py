@@ -72,7 +72,7 @@ def get_character_names_and_ids():
         print(f'Request failed with status code {response.status_code}')
     
 def post_wishlist(url, json_data):
-    headers = {'Content-type': 'application/json', 'accept' : 'application/json', 'Authorization': '19c3cffcd3cffd4fa2739478597a6e20a24d3f4165850e8d8aefce5cf44254af'}
+    headers = {'Content-type': 'application/json', 'accept' : 'application/json', 'Authorization': authorization}
     response = requests.post(url, data=json.dumps(json_data), headers=headers)
     return response
 
